@@ -8,14 +8,14 @@ jobs:
   windows_job:
     runs-on: windows-latest
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+      - run: echo '1. Hi ${{ env.mascot }}'  # Hi Mona
+      - run: echo '2. Hi ${{ env.mascot }}'  # Hi Octocat
         env:
           mascot: Octocat
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+      - run: echo '3. Hi ${{ env.mascot }}'  # Hi Octocat
   linux_job:
     runs-on: ubuntu-latest
     env:
       mascot: Tux
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Tux
+      - run: echo '4. Hi ${{ env.mascot }}'  # Hi Tux
